@@ -2,7 +2,8 @@
   class="card"
   [appearance]="appearance"
 >
-  <mat-card-header *ngIf="title || subtitle || image">
+  @if (title || subtitle || image) {
+  <mat-card-header>
     <mat-card-title-group>
       <mat-card-title>
         {{ title }}
@@ -10,32 +11,33 @@
       <mat-card-subtitle>
         {{ subtitle }}
       </mat-card-subtitle>
+      @if (!expanded) {
       <img
-        *ngIf="!expanded; else expandedImage"
         mat-card-avatar
         [src]="image"
       />
-      <ng-template #expandedImage>
-        <img
-          mat-card-sm-image
-          [src]="image"
-        />
-      </ng-template>
+      } @else {
+      <img
+        mat-card-sm-image
+        [src]="image"
+      />
+      }
     </mat-card-title-group>
   </mat-card-header>
+  }
 
   <mat-card-content>
     <!-- Basic content when not expanded -->
-    <p *ngIf="!expanded">
+    @if (!expanded) {
+    <p>
       <strong>Phone:</strong>
       {{ content }}
     </p>
-    
+    }
+
     <!-- Additional details when expanded -->
-    <div
-      *ngIf="expanded"
-      class="expanded-content"
-    >
+    @if (expanded) {
+    <div class="expanded-content">
       <p><strong>Phone:</strong> {{ content }}</p>
       <p><strong>Cell:</strong> {{ cell }}</p>
       <p><strong>Gender:</strong> {{ gender }}</p>
@@ -51,15 +53,17 @@
       </ul>
       <p><strong>Registered:</strong> {{ registered?.date | date }}</p>
     </div>
+    }
   </mat-card-content>
 
   <mat-card-actions>
+    @for (action of actions; track action) {
     <button
       mat-button
-      *ngFor="let action of actions"
       (click)="onAction(subtitle)"
     >
       {{ action }}
     </button>
+    }
   </mat-card-actions>
 </mat-card>

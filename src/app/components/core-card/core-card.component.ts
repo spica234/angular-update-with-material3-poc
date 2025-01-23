@@ -1,4 +1,4 @@
-import { DatePipe, NgFor, NgIf } from '@angular/common';
+import { DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatCardAppearance, MatCardModule } from '@angular/material/card';
 
@@ -27,8 +27,6 @@ import { MatCardAppearance, MatCardModule } from '@angular/material/card';
   templateUrl: './core-card.component.html',
   styleUrls: ['./core-card.component.scss'],
   imports: [
-    NgIf,
-    NgFor,
     MatCardModule,
     DatePipe
   ],

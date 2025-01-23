@@ -1,7 +1,7 @@
 import { CoreCardComponent } from '@/app/components/core-card/core-card.component';
 import { User } from '@/app/shared/models/interfaces';
 import { ApiService } from '@/app/shared/services';
-import { AsyncPipe, NgFor } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
@@ -14,7 +14,6 @@ import { catchError } from 'rxjs/internal/operators/catchError';
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    NgFor,
     AsyncPipe,
     CoreCardComponent,
     MatDialogModule
