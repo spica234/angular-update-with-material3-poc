@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+import { DatePipe, NgFor, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatCardAppearance, MatCardModule } from '@angular/material/card';
 
@@ -29,7 +29,8 @@ import { MatCardAppearance, MatCardModule } from '@angular/material/card';
   imports: [
     NgIf,
     NgFor,
-    MatCardModule
+    MatCardModule,
+    DatePipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true
@@ -43,8 +44,21 @@ export class CoreCardComponent {
   @Input() appearance!: MatCardAppearance;
   @Input() expanded = false;
 
-  @Output() readonly actionClick = new EventEmitter<string>();
+  // Additional User interface properties
+  @Input() cell?: string;
+  @Input() gender?: string;
+  @Input() dob?: { date: string; age: number };
+  @Input() location?: {
+    street: { number: number; name: string };
+    city: string;
+    state: string;
+    country: string;
+    postcode: number;
+    timezone: { description: string };
+  };
+  @Input() registered?: { date: string; age: number };
 
+  @Output() readonly actionClick = new EventEmitter<string>();
 
   onAction(value: string): void {
     this.actionClick.emit(value);

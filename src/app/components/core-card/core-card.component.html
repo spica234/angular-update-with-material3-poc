@@ -4,8 +4,12 @@
 >
   <mat-card-header *ngIf="title || subtitle || image">
     <mat-card-title-group>
-      <mat-card-title>{{ title }}</mat-card-title>
-      <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
+      <mat-card-title>
+        {{ title }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ subtitle }}
+      </mat-card-subtitle>
       <img
         *ngIf="!expanded; else expandedImage"
         mat-card-avatar
@@ -19,14 +23,43 @@
       </ng-template>
     </mat-card-title-group>
   </mat-card-header>
+
   <mat-card-content>
-    {{ content }}
+    <!-- Basic content when not expanded -->
+    <p *ngIf="!expanded">
+      <strong>Phone:</strong>
+      {{ content }}
+    </p>
+    
+    <!-- Additional details when expanded -->
+    <div
+      *ngIf="expanded"
+      class="expanded-content"
+    >
+      <p><strong>Phone:</strong> {{ content }}</p>
+      <p><strong>Cell:</strong> {{ cell }}</p>
+      <p><strong>Gender:</strong> {{ gender }}</p>
+      <p><strong>Age:</strong> {{ dob?.age }}</p>
+      <p><strong>Location:</strong></p>
+      <ul>
+        <li>Street: {{ location?.street?.number }} {{ location?.street?.name }}</li>
+        <li>City: {{ location?.city }}</li>
+        <li>State: {{ location?.state }}</li>
+        <li>Country: {{ location?.country }}</li>
+        <li>Postcode: {{ location?.postcode }}</li>
+        <li>Timezone: {{ location?.timezone?.description }}</li>
+      </ul>
+      <p><strong>Registered:</strong> {{ registered?.date | date }}</p>
+    </div>
   </mat-card-content>
+
   <mat-card-actions>
     <button
       mat-button
       *ngFor="let action of actions"
       (click)="onAction(subtitle)"
-    >{{ action }}</button>
+    >
+      {{ action }}
+    </button>
   </mat-card-actions>
 </mat-card>

@@ -1,8 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
 
+// Define the palettes for the theme using the Material Design color tool
+$primary: mat.define-palette(mat.$indigo-palette);
+$base: mat.define-palette(mat.$blue-palette);
+$secondary: mat.define-palette(mat.$green-palette);
+$accent: mat.define-palette(mat.$pink-palette);
+$warn: mat.define-palette(mat.$red-palette);
+$success: mat.define-palette(mat.$green-palette);
+$info: mat.define-palette(mat.$blue-palette);
+$error: mat.define-palette(mat.$red-palette);
+$divider: mat.define-palette(mat.$grey-palette);
+$text-palette: mat.define-palette(mat.$grey-palette, 900); // Define text as a palette
+
+// Create the theme object
+$theme: mat.define-light-theme((color: (primary: $primary,
+        accent: $accent,
+        base: $base,
+        secondary: $secondary,
+        text: $text-palette,
+        success: $success,
+        info: $info,
+        error: $warn,
+        warn: $warn,
+        divider: $divider ),
+      typography: mat.define-typography-config(),
+      density: 0));
+
+// Include the theme in the application
+@include mat.all-component-themes($theme);
+
+// Global styles
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 body {

@@ -1,10 +1,35 @@
+@use "@angular/material" as mat;
+@use "sass:map";
+@use "../../../styles" as *;
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
+// Add background colors
+  mat-card-header {
+    background-color: mat.get-color-from-palette($primary);
+    color: mat.get-color-from-palette($primary, default-contrast);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  mat-card-content {
+    padding: 1rem;
+  }
+
+  mat-card-actions {
+    padding: 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
+
+// Make subtitle text more visible on dark background
+:host ::ng-deep mat-card-subtitle {
+  color: rgba(255, 255, 255, 0.8) !important;
 }

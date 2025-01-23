@@ -109,6 +109,14 @@ export class HomeComponent implements OnInit {
     userProfileDialog.expanded = true;
     userProfileDialog.actions = ['Close'];
     userProfileDialog.appearance = 'outlined';
+
+    // Set additional user details
+    userProfileDialog.cell = selectedUser.cell;
+    userProfileDialog.gender = selectedUser.gender;
+    userProfileDialog.dob = selectedUser.dob;
+    userProfileDialog.location = selectedUser.location;
+    userProfileDialog.registered = selectedUser.registered;
+
     userProfileDialog.actionClick.pipe(take(1)).subscribe(() => {
       userProfileDialog.expanded = false;
       this.dialogRef.close();
