@@ -5,10 +5,48 @@
     {
       "type": "npm",
       "script": "start",
+      "label": "npm: start",
+      "detail": "Running the dev server",
       "isBackground": true,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "icon": {
+        "dark": "media/icons/white.png",
+        "light": "media/icons/black.png"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "promptOnClose": false,
+      "path": "${workspaceFolder}",
+      "runOptions": {
+        "runOn": "default",
+        "instanceLimit": 1,
+        "reevaluateOnRerun": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "NODE_ENV": "development"
+        }
+      },
       "problemMatcher": {
         "owner": "typescript",
         "pattern": "$tsc",
+        "source": "tsc",
+        "applyTo": "allDocuments",
+        "base": "$tsc",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
         "background": {
           "activeOnStart": true,
           "beginsPattern": {
