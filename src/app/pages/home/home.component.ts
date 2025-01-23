@@ -3,7 +3,7 @@ import { User } from '@/app/shared/models/interfaces';
 import { ApiService } from '@/app/shared/services';
 import { AsyncPipe } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { BehaviorSubject, filter, Observable, of, take } from 'rxjs';
 import { catchError } from 'rxjs/internal/operators/catchError';
@@ -21,15 +21,13 @@ import { catchError } from 'rxjs/internal/operators/catchError';
   standalone: true
 })
 export class HomeComponent implements OnInit {
+  private readonly _apiService = inject(ApiService);
+  private readonly _dialog = inject(MatDialog);
+
   private dialogRef!: MatDialogRef<CoreCardComponent>;
   private readonly users: BehaviorSubject<Array<User>> = new BehaviorSubject<Array<User>>([]);
 
   readonly users$ = this.users.asObservable();
-
-  constructor(
-    private readonly _apiService: ApiService,
-    private readonly _dialog: MatDialog
-  ) { }
 
   /**
    * @inheritdoc

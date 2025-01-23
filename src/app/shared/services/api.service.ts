@@ -1,6 +1,6 @@
 import { LoaderService } from '@/app/shared/services/loader.service';
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { finalize, map, Observable } from 'rxjs';
 
 /**
@@ -26,6 +26,9 @@ import { finalize, map, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
+  private readonly _http = inject(HttpClient);
+  private readonly _loaderService = inject(LoaderService);
+
 
   /**
    * The base endpoint for all requests to the News API service.
@@ -35,11 +38,6 @@ export class ApiService {
    * HTTP requests to News API endpoints.
    */
   private readonly BASE_URL = 'https://randomuser.me/api/';
-
-  constructor(
-    private readonly _http: HttpClient,
-    private readonly _loaderService: LoaderService
-  ) { }
 
   /**
    * Retrieves data from the server using the specified query parameters.
