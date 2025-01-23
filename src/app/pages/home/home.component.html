@@ -1,0 +1,11 @@
+<div class="container">
+  <app-core-card
+    *ngFor="let user of users$ | async; let i=index"
+    [title]="user.name.title + ' ' + user.name.first + ' ' + user.name.last"
+    [subtitle]="user.email"
+    [content]="user.phone"
+    [image]="user.picture.medium"
+    [actions]="['More']"
+    (actionClick)="onAction(i)"
+  ></app-core-card>
+</div>

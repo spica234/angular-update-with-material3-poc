@@ -69,7 +69,11 @@
               "browserTarget": "angular-update-with-material3-poc:build:production"
             },
             "development": {
-              "browserTarget": "angular-update-with-material3-poc:build:development"
+              "browserTarget": "angular-update-with-material3-poc:build:development",
+              "hmr": true,
+              "port": 4200,
+              "host": "localhost",
+              "watch": true
             }
           },
           "defaultConfiguration": "development"

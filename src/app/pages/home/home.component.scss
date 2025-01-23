@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; // Makes items stack vertically
+  gap: 1rem; // Adds space between cards
+  align-items: stretch; // Makes cards take full width
+  min-height: 100vh;
+  padding: 1rem; // Adds some padding around container
+}
+
+app-core-card {
+  width: 100%; // Ensures each card takes full width
+}
