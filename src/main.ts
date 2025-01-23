@@ -1,6 +1,6 @@
 import { AppComponent } from '@/app/app.component';
 import { routes } from '@/app/app.routes';
-import {} from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
@@ -13,10 +13,10 @@ bootstrapApplication(AppComponent, {
     importProvidersFrom(
       BrowserModule,
       RouterModule.forRoot(routes),
-      MatProgressSpinnerModule,
-      HttpClientModule
+      MatProgressSpinnerModule
     ),
-    provideAnimations()
+    provideAnimations(),
+    provideHttpClient(withInterceptorsFromDi())
   ]
 })
   .catch(err => console.error(err));
