@@ -66,14 +66,14 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-update-with-material3-poc:build:production"
+              "buildTarget": "angular-update-with-material3-poc:build:production"
             },
             "development": {
-              "browserTarget": "angular-update-with-material3-poc:build:development",
               "hmr": true,
               "port": 4200,
               "host": "localhost",
-              "watch": true
+              "watch": true,
+              "buildTarget": "angular-update-with-material3-poc:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-update-with-material3-poc:build"
+            "buildTarget": "angular-update-with-material3-poc:build"
           }
         },
         "test": {
