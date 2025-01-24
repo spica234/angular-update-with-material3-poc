@@ -4,7 +4,7 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { importProvidersFrom } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 
@@ -12,6 +12,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(
       BrowserModule,
+      BrowserAnimationsModule,
       RouterModule.forRoot(routes),
       MatProgressSpinnerModule
     ),
