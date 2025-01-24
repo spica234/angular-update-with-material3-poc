@@ -9,16 +9,15 @@ import { BehaviorSubject, filter, Observable, of, take } from 'rxjs';
 import { catchError } from 'rxjs/internal/operators/catchError';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AsyncPipe,
-    CoreCardComponent,
-    MatDialogModule
-  ],
-  standalone: true
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        AsyncPipe,
+        CoreCardComponent,
+        MatDialogModule
+    ]
 })
 export class HomeComponent implements OnInit {
   private readonly _apiService = inject(ApiService);

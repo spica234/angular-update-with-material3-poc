@@ -23,15 +23,14 @@ import { MatCardAppearance, MatCardModule } from '@angular/material/card';
  * @property {MatCardAppearance} appearance - The visual style of the card ('outlined' | 'raised')
  */
 @Component({
-  selector: 'app-core-card',
-  templateUrl: './core-card.component.html',
-  styleUrls: ['./core-card.component.scss'],
-  imports: [
-    MatCardModule,
-    DatePipe
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true
+    selector: 'app-core-card',
+    templateUrl: './core-card.component.html',
+    styleUrls: ['./core-card.component.scss'],
+    imports: [
+        MatCardModule,
+        DatePipe
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoreCardComponent {
   @Input() title!: string;

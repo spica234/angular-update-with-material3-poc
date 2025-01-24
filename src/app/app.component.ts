@@ -6,12 +6,11 @@ import { RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [RouterOutlet, MatProgressBarModule, AsyncPipe]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [RouterOutlet, MatProgressBarModule, AsyncPipe]
 })
 export class AppComponent {
   readonly loading: Readonly<Observable<boolean>> = inject(LoaderService).loading$;
