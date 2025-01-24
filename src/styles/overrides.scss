@@ -1,0 +1,73 @@
+@use "@angular/material" as mat;
+
+:root,
+:host {
+  @include mat.theme-overrides(
+    (
+      primary: #704e9a,
+      on-primary: #ffffff,
+      primary-container: #eedcff,
+      on-primary-container: #290252,
+      inverse-primary: #d9b9ff,
+      primary-fixed: #eedcff,
+      primary-fixed-dim: #d9b9ff,
+      on-primary-fixed: #290252,
+      on-primary-fixed-variant: #573680,
+      secondary: #675878,
+      on-secondary: #ffffff,
+      secondary-container: #eedbff,
+      on-secondary-container: #221631,
+      secondary-fixed: #eedbff,
+      secondary-fixed-dim: #d2bfe4,
+      on-secondary-fixed: #221631,
+      on-secondary-fixed-variant: #4f415f,
+      tertiary: #894a66,
+      on-tertiary: #ffffff,
+      tertiary-container: #ffd8e6,
+      on-tertiary-container: #390722,
+      tertiary-fixed: #ffd8e6,
+      tertiary-fixed-dim: #ffb0d0,
+      on-tertiary-fixed: #390722,
+      on-tertiary-fixed-variant: #6e334e,
+      background: #fdf8f8,
+      on-background: #1c1b1c,
+      surface: #fdf8f8,
+      surface-dim: #ddd9d9,
+      surface-bright: #fdf8f8,
+      surface-container-lowest: #ffffff,
+      surface-container-low: #f7f2f3,
+      surface-container: #f1eded,
+      surface-container-high: #ebe7e7,
+      surface-container-highest: #e6e1e2,
+      on-surface: #1c1b1c,
+      shadow: #000000,
+      scrim: #000000,
+      surface-tint: #615d63,
+      inverse-surface: #313030,
+      inverse-on-surface: #f4f0f0,
+      outline: #7a767b,
+      outline-variant: #cbc5cb,
+      neutral: #797676,
+      neutral10: #1c1b1c,
+      error: #ba1a1a,
+      error-container: #ffdad6,
+      on-error: #ffffff,
+      on-error-container: #410002,
+      surface-variant: #e7e0e7,
+      on-surface-variant: #49454b,
+      neutral-variant: #7a757b,
+      neutral-variant20: #322f34,
+      inverse-secondary: #d2bfe4,
+      inverse-tertiary: #ffb0d0
+    )
+  );
+}
+
+:root {
+  @include mat.card-overrides(
+    (
+      elevated-container-color: var(--mat-sys-surface-container-low),
+      outlined-container-color: var(mat-sys-outline-variant)
+    )
+  );
+}
