@@ -1,5 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardAppearance, MatCardModule } from '@angular/material/card';
 
 /**
@@ -28,6 +29,7 @@ import { MatCardAppearance, MatCardModule } from '@angular/material/card';
   styleUrls: ['./core-card.component.scss'],
   imports: [
     MatCardModule,
+    MatButtonModule,
     DatePipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
