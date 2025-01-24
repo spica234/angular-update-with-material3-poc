@@ -3,21 +3,22 @@ import { User } from '@/app/shared/models/interfaces';
 import { ApiService } from '@/app/shared/services';
 import { AsyncPipe } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { BehaviorSubject, filter, Observable, of, take } from 'rxjs';
 import { catchError } from 'rxjs/internal/operators/catchError';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [
-        AsyncPipe,
-        CoreCardComponent,
-        MatDialogModule
-    ]
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    AsyncPipe,
+    CoreCardComponent,
+    MatDialogModule
+  ],
+  standalone: true
 })
 export class HomeComponent implements OnInit {
   private readonly _apiService = inject(ApiService);
