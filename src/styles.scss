@@ -1,5 +1,5 @@
 @use "@angular/material" as mat;
-@use "./styles/styles_theme-colors.scss" as theme-colors;
+@use "./app/styles/theme-colors.scss" as theme-colors;
 
 html {
   @include mat.theme(
@@ -22,4 +22,6 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
 }
