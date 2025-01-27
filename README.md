@@ -141,11 +141,11 @@ Migration process will be further divided into two parts:
 
 > ![Note](https://img.shields.io/badge/Important-Notes-red?style=flat)
 >
-> ➡️ This is an `incremental process`, starting with *Angular 16*, then *Angular 17*, then *Angular 18*, and finally *Angular 19*.
-> ➡️ Don't jump directly to *Angular 19*. Update *incrementally* to avoid potential issues.
-> ➡️ Run `ng update` to evaluate the changes and ensure a smooth transition and to find out packages that need to be updated.
-> ➡️ Address any *deprecations, breaking changes, or compatibility issues* at each step.
-> ➡️ Use the `ng update` command, addressing deprecations at each stage.
+> ➡️ This is an `incremental process`, starting with *Angular 16*, then *Angular 17*, then *Angular 18*, and finally *Angular 19*.  
+> ➡️ Don't jump directly to *Angular 19*. Update *incrementally* to avoid potential issues.  
+> ➡️ Run `ng update` to evaluate the changes and ensure a smooth transition and to find out packages that need to be updated.  
+> ➡️ Address any *deprecations, breaking changes, or compatibility issues* at each step.  
+> ➡️ Use the `ng update` command, addressing deprecations at each stage.  
 
 ---------------------------------------------------------------------------------------
 
