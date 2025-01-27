@@ -89,9 +89,9 @@
 
 
 
-## ✨ Final Project's Material 3 Various Patteletes Preview
+## ✨ Final Converted Project's Material 3 Various Patteletes Preview by running Project
 
-
+> To run the project, simply clone and run `npm install` and then `npm run start` for `serve` or `npm run build` if requirede to be deployed.
 
 <div style="display:flex; flex-direction: row; justify-content: space-around; flex-wrap: wrap; align-items: stretch;>
   <img src="https://a.okmd.dev/md/6797508036ec7.png" alt="s14530901272025" width="200px" height="370px" />
