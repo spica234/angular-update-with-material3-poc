@@ -10,7 +10,7 @@
 ">
 <img
   width="70%"
-  src="https://a.okmd.dev/md/6796d89a167f2.png"
+  src="https://d585tldpucybw.cloudfront.net/sfimages/default-source/blogs/2023/2023-11/angular-logo-1200-303.png?sfvrsn=d8bbe35c_3"
   alt="Migrating an Angular 15 project to Angular 19.1 with Material 3"
   />
 <div>
@@ -307,7 +307,7 @@ Material 3 introduces a new theming system based on MDC Web (Material Design Com
 
 There's no shortcut to migrating to Material 3. It requires a thorough understanding of the new theming system based on MDC Web (Material Design Components for the Web).
 
-However there're **quick 2 gold-stanard steps** to migrate to Material 3 without learning the new theming system, however, it's highly recommended to understand Material 3's core concepts for a successful migration. That we'll see in `### 🔄 The Quick Migration Process: Two Key Steps (Without learning)` ahead.
+However there're **quick 2 gold-stanard steps** to migrate to Material 3 without learning the new theming system, however, it's highly recommended to understand Material 3's core concepts for a successful migration. That we'll see in `🔄 The Quick Migration Process: Two Key Steps (Without learning)` ahead.
 
 ### 📄 Abstract
 
