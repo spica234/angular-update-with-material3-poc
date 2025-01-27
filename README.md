@@ -44,7 +44,7 @@
 
 - [🌀 Migrating an Angular 15 project to Angular 19.1 with Material 3](#-migrating-an-angular-15-project-to-angular-191-with-material-3)
   - [⚡ Table of Contents](#-table-of-contents)
-  - [✨  Preview](#--preview)
+  - [✨ Final Project's Material 3 Various Patteletes Preview](#-final-projects-material-3-various-patteletes-preview)
   - [📝 Abstract](#-abstract)
   - [🎯 Overview: Quick overview of all commit of Migration](#-overview-quick-overview-of-all-commit-of-migration)
   - [🎯 Introduction](#-introduction)
@@ -84,17 +84,19 @@
   - [📖 Summary](#-summary)
   - [🏁 Conclusions](#-conclusions)
 
-## ✨  Preview
+## ✨ Final Project's Material 3 Various Patteletes Preview
 
-<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
-  <img src="https://a.okmd.dev/md/6797508036ec7.png" alt="s14530901272025" style="width: 100%; height: 350px; object-fit: cover;" />
-  <img src="https://a.okmd.dev/md/679750d96c9b5.png" alt="s14540801272025" style="width: 100%; height: 350px; object-fit: cover;" />
-  <img src="https://a.okmd.dev/md/679751108424f.png" alt="s14553101272025" style="width: 100%; height: 350px; object-fit: cover;" />
-  <img src="https://a.okmd.dev/md/679751248290e.png" alt="s14555301272025" style="width: 100%; height: 350px; object-fit: cover;" />
-  <img src="https://a.okmd.dev/md/6797515513085.png" alt="s14564301272025" style="width: 100%; height: 350px; object-fit: cover;" />
-  <img src="https://a.okmd.dev/md/67975162bf5de.png" alt="s14565501272025" style="width: 100%; height: 350px; object-fit: cover;" />
-  <img src="https://a.okmd.dev/md/67975180499bd.png" alt="s14572601272025" style="width: 100%; height: 350px; object-fit: cover;" />
-  <img src="https://a.okmd.dev/md/67975191c252c.png" alt="s14574101272025" style="width: 100%; height: 350px; object-fit: cover;" />
+<div style="display:flex; flex-direction: row; justify-content: space-around; align-items: stretch; gap: 5px;">
+  <img src="https://a.okmd.dev/md/6797508036ec7.png" alt="s14530901272025" width="270px" height="420px" />
+  <img src="https://a.okmd.dev/md/679750d96c9b5.png" alt="s14540801272025" width="270px" height="420px" />
+  <img src="https://a.okmd.dev/md/679751108424f.png" alt="s14553101272025" width="270px" height="420px" />
+  <img src="https://a.okmd.dev/md/679751248290e.png" alt="s14555301272025" width="270px" height="420px" />
+  </div>
+  <div style="display:flex; flex-direction: row; justify-content: space-around; align-items: stretch; gap: 5px;">
+  <img src="https://a.okmd.dev/md/6797515513085.png" alt="s14564301272025" width="270px" height="420px" />
+  <img src="https://a.okmd.dev/md/67975162bf5de.png" alt="s14565501272025" width="270px" height="420px" />
+  <img src="https://a.okmd.dev/md/67975180499bd.png" alt="s14572601272025" width="270px" height="420px" />
+  <img src="https://a.okmd.dev/md/67975191c252c.png" alt="s14574101272025" width="270px" height="420px" />
 </div>
 
 ## 📝 Abstract
