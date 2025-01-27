@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  align-items: flex-start;
+  align-items: cetner;
   gap: 20px;
 ">
 <img
@@ -14,30 +14,32 @@
   alt="Migrating an Angular 15 project to Angular 19.1 with Material 3"
   />
 <div>
-<div></div>
+<br/>
 <div
-  style="display: inline-flex; flex-direction: row; justify-content: flex-start; align-items: center; gap: 20px;">
+  style="width: 100%; display: inline-flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 50px;">
+&nbsp;
   <img
-    src="https://img.shields.io/badge/Author-Anukool%20Naik-blue"
+    src="https://img.shields.io/badge/Author-Anukool%20Naik-blue
+    style="gap:20px"
     alt="Author"
   />
+&nbsp;
   <img
     src="https://img.shields.io/badge/Date-17%20Dec%202025-blue"
+    style="gap:10px"
     alt="Date"
   />
-<div></div>
-</div>
-<div
-  style="display: inline-flex; flex-direction: row; justify-content: flex-start; align-items: center; gap: 20px;">
+&nbsp;
   <img
     src="https://img.shields.io/badge/Angular-19-red?style=flat&logo=angular"
+    style="gap:10px"
     alt="Angular" />
+&nbsp;
   <img
     src="https://img.shields.io/badge/Material-3-yellow?style=flat&logo=material-design?logoColor=white"
+    style="gap:10px"
     alt="Material" />
-<div></div>
-</div>
-</div>
+&nbsp;
 </div>
 
 ## ⚡ Table of Contents
