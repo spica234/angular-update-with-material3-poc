@@ -86,17 +86,17 @@
 
 ## ✨ Final Project's Material 3 Various Patteletes Preview
 
-<div style="display:flex; flex-direction: row; justify-content: space-around; align-items: stretch; gap: 5px;">
-  <img src="https://a.okmd.dev/md/6797508036ec7.png" alt="s14530901272025" width="270px" height="420px" />
-  <img src="https://a.okmd.dev/md/679750d96c9b5.png" alt="s14540801272025" width="270px" height="420px" />
-  <img src="https://a.okmd.dev/md/679751108424f.png" alt="s14553101272025" width="270px" height="420px" />
-  <img src="https://a.okmd.dev/md/679751248290e.png" alt="s14555301272025" width="270px" height="420px" />
+<div style="display:flex; flex-direction: row; justify-content: space-between; align-items: stretch; gap: 10px;">
+  <img src="https://a.okmd.dev/md/6797508036ec7.png" alt="s14530901272025" width="220px" height="370px" />
+  <img src="https://a.okmd.dev/md/679750d96c9b5.png" alt="s14540801272025" width="220px" height="370px" />
+  <img src="https://a.okmd.dev/md/679751108424f.png" alt="s14553101272025" width="220px" height="370px" />
+  <img src="https://a.okmd.dev/md/679751248290e.png" alt="s14555301272025" width="220px" height="370px" />
   </div>
-  <div style="display:flex; flex-direction: row; justify-content: space-around; align-items: stretch; gap: 5px;">
-  <img src="https://a.okmd.dev/md/6797515513085.png" alt="s14564301272025" width="270px" height="420px" />
-  <img src="https://a.okmd.dev/md/67975162bf5de.png" alt="s14565501272025" width="270px" height="420px" />
-  <img src="https://a.okmd.dev/md/67975180499bd.png" alt="s14572601272025" width="270px" height="420px" />
-  <img src="https://a.okmd.dev/md/67975191c252c.png" alt="s14574101272025" width="270px" height="420px" />
+  <div style="display:flex; flex-direction: row; justify-content: space-between; align-items: stretch; gap: 10px;">
+  <img src="https://a.okmd.dev/md/6797515513085.png" alt="s14564301272025" width="220px" height="370px" />
+  <img src="https://a.okmd.dev/md/67975162bf5de.png" alt="s14565501272025" width="220px" height="370px" />
+  <img src="https://a.okmd.dev/md/67975180499bd.png" alt="s14572601272025" width="220px" height="370px" />
+  <img src="https://a.okmd.dev/md/67975191c252c.png" alt="s14574101272025" width="220px" height="370px" />
 </div>
 
 ## 📝 Abstract
