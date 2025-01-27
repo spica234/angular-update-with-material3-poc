@@ -18,9 +18,8 @@
 <div
   style="width: 100%; display: inline-flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 50px;">
 &nbsp;
-  <img
-    src="https://img.shields.io/badge/Author-Anukool%20Naik-blue
-    style="gap:20px"
+ <img
+    src="https://img.shields.io/badge/Author-Anukool%20Naik-blue"
     alt="Author"
   />
 &nbsp;
