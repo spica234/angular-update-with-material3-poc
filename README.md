@@ -14,7 +14,7 @@
   alt="Migrating an Angular 15 project to Angular 19.1 with Material 3"
   />
 <div>
-<br/>
+
 <div
   style="width: 100%; display: inline-flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 50px;">
 &nbsp;
@@ -41,7 +41,9 @@
 &nbsp;
 </div>
 
+
 ## ⚡ Table of Contents
+
 
 - [🌀 Migrating an Angular 15 project to Angular 19.1 with Material 3](#-migrating-an-angular-15-project-to-angular-191-with-material-3)
   - [⚡ Table of Contents](#-table-of-contents)
@@ -85,7 +87,11 @@
   - [📖 Summary](#-summary)
   - [🏁 Conclusions](#-conclusions)
 
+
+
 ## ✨ Final Project's Material 3 Various Patteletes Preview
+
+
 
 <div style="display:flex; flex-direction: row; justify-content: space-around; flex-wrap: wrap; align-items: stretch;>
   <img src="https://a.okmd.dev/md/6797508036ec7.png" alt="s14530901272025" width="200px" height="370px" />
@@ -100,11 +106,17 @@
   <img src="https://a.okmd.dev/md/67975191c252c.png" alt="s14574101272025" width="200px" height="370px" />
 </div>
 
+
+
+
 ## 📝 Abstract
+
+
 
 <p style="margin-left: 20px;">This guide provides a structured approach to migrating to latest **Material 3**. In order to use Material 3, we need to upgrade our Angular project to >= Angular 18, as Material 3 was not quite compatible with Angular 17 or below.</p>
 
 ## 🎯 Overview: Quick overview of all commit of Migration
+
 
 > (All steps and details after this section)
 
@@ -126,7 +138,11 @@
 | 10. | **Migrate to Material 3: Update Angular.json and import new theme**  | Updated the angular.json and imported the new Material 3 theme                                                                                                                                                                                                                                                                | - [x] [Update Angular.json and import new theme](https://github.com/spica234/angular-update-with-material3-poc/commit/833c822db335e8b4d640ffaf78f1bc3e2de4b809)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | 11. | **Migrate to Material 3: Update Component Themes**                   | Updated the component themes based on the new Material 3 theme                                                                                                                                                                                                                                                                | - [x] [Update Component Themes](https://github.com/spica234/angular-update-with-material3-poc/commit/712859ef58f38ee7821be2cf849cecfa114bb674) </br> - [x] [Remove Duplicate](https://github.com/spica234/angular-update-with-material3-poc/commit/6620c0c730c3a3999e7997fbf2e08319a6d340fc) </br> - [x] [Recreate Indigo with exact color code](https://github.com/spica234/angular-update-with-material3-poc/commit/7c4883c1d02a12fbdec0e540a4e134ab1f5ade6a) </br> - [x] [Fix Import typo](https://github.com/spica234/angular-update-with-material3-poc/commit/aefb0eb116c010d6699db1535c646808d4b5012a)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
+
 ## 🎯 Introduction
+
+
+
 
 Migration process will be further divided into two parts:
 
@@ -135,9 +151,13 @@ Migration process will be further divided into two parts:
 
 > By following these steps, we can ensure a smooth migration and take advantage of the latest features and improvements in Angular and Material.
 
+
+
 ## ❗**About Angular Migration**
 
+
 ### 🗒️ <span style="color:orange">Notes</span>
+-----------------------------------------------------------
 
 > ![Note](https://img.shields.io/badge/Important-Notes-red?style=flat)
 >
@@ -147,9 +167,12 @@ Migration process will be further divided into two parts:
 > ➡️ Address any *deprecations, breaking changes, or compatibility issues* at each step.  
 > ➡️ Use the `ng update` command, addressing deprecations at each stage.  
 
----------------------------------------------------------------------------------------
 
 ### ⚛️ <span style="color:blue">Standard Commands for Angular Update</span>
+
+-----------------------------------------------------------
+
+
 
  Run `ng update` to find out packages that need to be updated.
 
@@ -183,6 +206,7 @@ Output: (Based on the current project's dependencies)
 > - Or we can use `--allow-dirty` flag to run the command without any issues.
 > - It's recommended to commit your changes before running the `ng update` command.
 
+
 ## 🚀 **Part 1: Migrate to Angular 19 with Incremental Updates: A Comprehensive Guide**
 
 ![Angular](https://img.shields.io/badge/Angular-19-red?style=flat&logo=angular)
@@ -194,9 +218,18 @@ Output: (Based on the current project's dependencies)
 > - [x] It's essential to incrementally upgrade your Angular project to the latest version.
 > - [x] This ensures a smooth transition and helps address any deprecations or breaking changes at each step.
 
+
 ⬆️ **Update:** **Incremental Upgrade from Angular 15 to Angular 19**
 
+-----------------------------------------------------------
+
+
+
 ### 1️⃣ **Upgrade to Angular 16**
+
+-----------------------------------------------------------
+
+
 
   Start by updating to **Angular 16**.
 
@@ -227,7 +260,13 @@ Output: (Based on the current project's dependencies)
 
   After successfully updating to Angular, , proceed to update other dependencies, especially third-party libraries, plugins, and tools, to make sure they are compatible with updated Angular version.
 
+
+
 ### 2️⃣ **Upgrade to Angular 17**
+
+-----------------------------------------------------------
+
+
 
   After successfully updating to Angular 16, proceed to update to Angular 17.
 
@@ -258,7 +297,13 @@ After successfully updating to Angular 17, Verify the success of the update and 
 
 After successfully updating to Angular, , proceed to update other dependencies, especially third-party libraries, plugins, and tools, to make sure they are compatible with updated Angular version.
 
+
+
 ### 3️⃣ **Upgrade to Angular 18**
+
+-----------------------------------------------------------
+
+
 
   After successfully updating to Angular 17, proceed to update to Angular 18.
 
@@ -284,7 +329,13 @@ After successfully updating to Angular, , proceed to update other dependencies, 
 
 After successfully updating to Angular, , proceed to update other dependencies, especially third-party libraries, plugins, and tools, to make sure they are compatible with updated Angular version
 
-### 3. **Upgrade to Angular 19**
+
+
+### :four: **Upgrade to Angular 19**
+
+-----------------------------------------------------------
+
+
 
   Finally, update to Angular 19.
 
@@ -303,7 +354,12 @@ After successfully updating to Angular 19, Verify the success of the update and 
 
 After successfully updating to Angular, , proceed to update other dependencies, especially third-party libraries, plugins, and tools, to make sure they are compatible with updated Angular version.
 
+
 ### Conclusion
+
+-----------------------------------------------------------
+
+
 
 By following above steps,
 
@@ -311,14 +367,21 @@ By following above steps,
 - This approach ensures a smooth transition and helps address any deprecations or breaking changes at each step.
 - Remember to update other dependencies and test your application thoroughly after each upgrade to ensure compatibility and functionality.
 
+
+-----------------------------------------------------------
+
+
 ## 🚀 **Part 2:** Migrate to Material 3 in Angular: A Comprehensive Guide
 
 ![Material](https://img.shields.io/badge/Material-2-yellow?style=flat&logo=material-design?logoColor=white) ➡️
 ![Material](https://img.shields.io/badge/Material-3-red?style=flat&logo=material-design)
 
-----------------------------------------------------
 
 ### 🔄 Background
+
+-----------------------------------------------------------
+
+
 
 Material 3 introduces a new theming system based on MDC Web (Material Design Components for the Web). This new system uses CSS variables (custom properties) for theming, providing a more flexible and powerful way to customize your application's appearance. Migrating to Material 3 involves significant changes, primarily in styling, theming, and some component APIs.
 
@@ -328,13 +391,29 @@ However there're **quick 2 gold-stanard steps** to migrate to Material 3 without
 
 ### 📄 Abstract
 
+-----------------------------------------------------------
+
+
+
 This document provides a comprehensive guide to migrating from Angular Material 2 to Material 3. It emphasizes the importance of understanding the fundamental changes in theming and styling between the two versions. Unlike a simple automated migration, a successful transition to Material 3 requires grasping its core concepts, particularly the shift to CSS variables for theming. This guide outlines the key differences, provides practical steps for migrating your theme, and highlights the benefits of adopting Material 3.
+
+
 
 ### 📝 Introduction to Material 3
 
+-----------------------------------------------------------
+
+
+
 Migrating to Material 3 is more than just updating dependencies; it's a shift in how we approach styling and theming your Angular Material applications. This guide emphasizes a knowledge-based approach, focusing on understanding the underlying principles of Material 3 rather than seeking shortcuts.
 
+
+
 ### 🔑 Key Differences Between Material 2 and Material 3 Theming
+
+
+-----------------------------------------------------------
+
 
 Material 2 relied heavily on Sass mixins and functions for theming, which could be complex and difficult to customize. Material 3 adopts a simpler and more powerful approach using native CSS variables (custom properties). This change brings several advantages:
 
@@ -346,14 +425,26 @@ Material 2 relied heavily on Sass mixins and functions for theming, which could 
 | **Density**       | Default density and spacing.                                                                                                            | Adjusted density and spacing for a different visual appearance.                                                                                                                 |
 | **Theming**       | Uses mat-palette system.                                                                                                                | Uses a new theming system based on MDC Web (Material Design Components for the Web).                                                                                            |
 
+
+
 ### 🧩 Understanding Material 3's CSS Variables
+
+-----------------------------------------------------------
+
+
 
 Material 3 uses a token-based system where design values (colors, typography, spacing, etc.) are represented by CSS variables. These variables follow a consistent naming convention, making them easier to understand and use.
 
 - **System-Level Variables**: These variables define core design values, like `--mat-sys-on-surface`, `--mat-sys-title-large-font`, and `--mat-sys-title-large-line-height`.
 - **Component-Specific Variables**: Each component also exposes its own set of CSS variables for more granular control.
 
+
+
 ### 🔄 The Quick Migration Process: Two Key Steps (Without learning)
+
+-----------------------------------------------------------
+
+
 
 > See Commits realated to "Migrate to Material 3" in above `Overview` Section.
 
@@ -387,7 +478,12 @@ Or we can create an override file for e.g. `src/app/styles/override.scss` and im
 ],
 ```
 
+
 ### 🛠️ Steps to Migrating Custom Themes in Material 3 (Detailed with optional steps required for full project migrations)
+
+-----------------------------------------------------------
+
+
 
 This is the most complex part of the Material 3 migration.
 
@@ -400,15 +496,23 @@ This is the most complex part of the Material 3 migration.
 - [x] **Typography:** Use the mat.define-typography-config function to configure typography.
 - [x] **Test and Adjust:** Test your application thoroughly and adjust the theme as needed.
 
+
 ### 🏁 Conclusion
 
+-----------------------------------------------------------
+
+
+
 Migrating to Material 3 requires a shift in mindset from the Sass-based approach of Material 2 to the CSS variable-driven theming of Material 3. By understanding the core concepts and following the two key steps outlined in this guide – defining color palettes and overriding CSS variables – we can effectively migrate your Angular Material applications and take advantage of the benefits of the latest Material Design specifications. There is no shortcut for learning and understanding Material 3.
+
 
 ## 📊 Visual Overview
 
  Visual Overview of the Migration Process
 
 ### 📈 Migration Process Flowchart For Angular 15 -> Angular 19 and Material 3
+
+-----------------------------------------------------------
 
 ```mermaid
 graph TD
@@ -458,7 +562,10 @@ graph TD
   style A19 fill:#ffe6e6
 ```
 
+
+
 ## 📖 Summary
+
 
 In Summary, the migration process involves:
 
@@ -473,6 +580,11 @@ In Summary, the migration process involves:
 9. Taking advantage of the features and improvements of Material 3.
 10. Consulting the official Angular and Material documentation for the most accurate and up-to-date information.
 
+
+
+
 ## 🏁 Conclusions
+
+
 
 Integrating advanced debugging, thorough code reviews, and comprehensive QA testing ensures bugs are identified and resolved before reaching production.
