@@ -47,7 +47,7 @@
 
 - [🌀 Migrating an Angular 15 project to Angular 19.1 with Material 3](#-migrating-an-angular-15-project-to-angular-191-with-material-3)
   - [⚡ Table of Contents](#-table-of-contents)
-  - [✨ Final Project's Material 3 Various Patteletes Preview](#-final-projects-material-3-various-patteletes-preview)
+  - [✨ Final Converted Project's Material 3 Various Patteletes Preview by running Project](#-final-converted-projects-material-3-various-patteletes-preview-by-running-project)
   - [📝 Abstract](#-abstract)
   - [🎯 Overview: Quick overview of all commit of Migration](#-overview-quick-overview-of-all-commit-of-migration)
   - [🎯 Introduction](#-introduction)
@@ -67,7 +67,7 @@
       - [**1. Update Angular 18 Packages**](#1-update-angular-18-packages)
         - [**Other Various Migrations in Angular 18:**](#other-various-migrations-in-angular-18)
       - [**2. Update Other Dependencies in compatibility with Angular 18**](#2-update-other-dependencies-in-compatibility-with-angular-18)
-    - [3. **Upgrade to Angular 19**](#3-upgrade-to-angular-19)
+    - [4️⃣ **Upgrade to Angular 19**](#4️⃣-upgrade-to-angular-19)
       - [**1. Update Angular 19 Packages**](#1-update-angular-19-packages)
       - [**2. Update Other Dependencies in compatibility with Angular 19**](#2-update-other-dependencies-in-compatibility-with-angular-19)
     - [Conclusion](#conclusion)
@@ -161,11 +161,11 @@ Migration process will be further divided into two parts:
 
 > ![Note](https://img.shields.io/badge/Important-Notes-red?style=flat)
 >
-> ➡️ This is an `incremental process`, starting with *Angular 16*, then *Angular 17*, then *Angular 18*, and finally *Angular 19*.  
-> ➡️ Don't jump directly to *Angular 19*. Update *incrementally* to avoid potential issues.  
-> ➡️ Run `ng update` to evaluate the changes and ensure a smooth transition and to find out packages that need to be updated.  
-> ➡️ Address any *deprecations, breaking changes, or compatibility issues* at each step.  
-> ➡️ Use the `ng update` command, addressing deprecations at each stage.  
+> ➡️ This is an `incremental process`, starting with *Angular 16*, then *Angular 17*, then *Angular 18*, and finally *Angular 19*.
+> ➡️ Don't jump directly to *Angular 19*. Update *incrementally* to avoid potential issues.
+> ➡️ Run `ng update` to evaluate the changes and ensure a smooth transition and to find out packages that need to be updated.
+> ➡️ Address any *deprecations, breaking changes, or compatibility issues* at each step.
+> ➡️ Use the `ng update` command, addressing deprecations at each stage.
 
 
 ### ⚛️ <span style="color:blue">Standard Commands for Angular Update</span>
@@ -331,7 +331,7 @@ After successfully updating to Angular, , proceed to update other dependencies, 
 
 
 
-### :four: **Upgrade to Angular 19**
+### 4️⃣ **Upgrade to Angular 19**
 
 -----------------------------------------------------------
 
