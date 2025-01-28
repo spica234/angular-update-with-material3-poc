@@ -4,24 +4,23 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardAppearance, MatCardModule } from '@angular/material/card';
 
 /**
- * A component representing a Material card with customizable content.
+ * CoreCardComponent is a reusable card component that displays a title, subtitle, content, image, and actions.
+ * It also supports additional user interface properties such as cell, gender, date of birth, location, and registration details.
  *
- * @example
- * <core-card
- *   title="Card Title"
- *   subtitle="Card Subtitle"
- *   content="Card Content"
- *   image="path/to/image.jpg"
- *   [actions]="['Action 1', 'Action 2']"
- *   appearance="outlined"
- * ></core-card>
+ * @property {string} title - The title of the card.
+ * @property {string} subtitle - The subtitle of the card.
+ * @property {string} content - The main content of the card.
+ * @property {string} image - The URL of the image to display on the card.
+ * @property {string[]} actions - The list of actions available on the card.
+ * @property {MatCardAppearance} appearance - The appearance style of the card.
+ * @property {boolean} expanded - Indicates whether the card is expanded or not.
+ * @property {string} [cell] - The cell phone number associated with the card.
+ * @property {string} [gender] - The gender associated with the card.
+ * @property {{ date: string; age: number }} [dob] - The date of birth and age associated with the card.
+ * @property {{ street: { number: number; name: string }; city: string; state: string; country: string; postcode: number; timezone: { description: string } }} [location] - The location details associated with the card.
+ * @property {{ date: string; age: number }} [registered] - The registration date and age associated with the card.
  *
- * @property {string} title - The main heading text of the card
- * @property {string} subtitle - The secondary heading text of the card
- * @property {string} content - The main content text of the card
- * @property {string} image - URL or path to the card's image
- * @property {string[]} actions - Array of action text to be displayed as buttons
- * @property {MatCardAppearance} appearance - The visual style of the card ('outlined' | 'raised')
+ * @event actionClick - Emits an event when an action is clicked, passing the action value as a string.
  */
 @Component({
   selector: 'app-core-card',
