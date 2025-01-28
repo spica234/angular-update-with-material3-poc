@@ -41,9 +41,7 @@
 &nbsp;
 </div>
 
-
 ## ⚡ Table of Contents
-
 
 - [🌀 Migrating an Angular 15 project to Angular 19.1 with Material 3](#-migrating-an-angular-15-project-to-angular-191-with-material-3)
   - [⚡ Table of Contents](#-table-of-contents)
@@ -65,7 +63,6 @@
       - [**3. Update Other Dependencies in compatibility with Angular 18**](#3-update-other-dependencies-in-compatibility-with-angular-18)
     - [3️⃣ **Upgrade to Angular 18**](#3️⃣-upgrade-to-angular-18)
       - [**1. Update Angular 18 Packages**](#1-update-angular-18-packages)
-        - [**Other Various Migrations in Angular 18:**](#other-various-migrations-in-angular-18)
       - [**2. Update Other Dependencies in compatibility with Angular 18**](#2-update-other-dependencies-in-compatibility-with-angular-18)
     - [4️⃣ **Upgrade to Angular 19**](#4️⃣-upgrade-to-angular-19)
       - [**1. Update Angular 19 Packages**](#1-update-angular-19-packages)
@@ -77,17 +74,15 @@
     - [📝 Introduction to Material 3](#-introduction-to-material-3)
     - [🔑 Key Differences Between Material 2 and Material 3 Theming](#-key-differences-between-material-2-and-material-3-theming)
     - [🧩 Understanding Material 3's CSS Variables](#-understanding-material-3s-css-variables)
-    - [🔄 The Quick Migration Process: Two Key Steps (Without learning)](#-the-quick-migration-process-two-key-steps-without-learning)
+    - [🔄 **The Quick Migration Process: Two Key Steps (Without detailed steps)**](#-the-quick-migration-process-two-key-steps-without-detailed-steps)
       - [Step 1: Define Color Palettes by existing theme's color patteletes](#step-1-define-color-palettes-by-existing-themes-color-patteletes)
       - [Step 2: Override CSS Variables](#step-2-override-css-variables)
+      - [❗ Other ways to override CSS Variables](#-other-ways-to-override-css-variables)
     - [🛠️ Steps to Migrating Custom Themes in Material 3 (Detailed with optional steps required for full project migrations)](#️-steps-to-migrating-custom-themes-in-material-3-detailed-with-optional-steps-required-for-full-project-migrations)
     - [🏁 Conclusion](#-conclusion)
   - [📊 Visual Overview](#-visual-overview)
     - [📈 Migration Process Flowchart For Angular 15 -\> Angular 19 and Material 3](#-migration-process-flowchart-for-angular-15---angular-19-and-material-3)
-  - [📖 Summary](#-summary)
-  - [🏁 Conclusions](#-conclusions)
-
-
+  - [📖 Refrerences](#-refrerences)
 
 ## ✨ Final Converted Project's Material 3 Various Patteletes Preview by running Project
 
@@ -106,17 +101,11 @@
   <img src="https://a.okmd.dev/md/67975191c252c.png" alt="s14574101272025" width="200px" height="370px" />
 </div>
 
-
-
-
 ## 📝 Abstract
-
-
 
 <p style="margin-left: 20px;">This guide provides a structured approach to migrating to latest **Material 3**. In order to use Material 3, we need to upgrade our Angular project to >= Angular 18, as Material 3 was not quite compatible with Angular 17 or below.</p>
 
 ## 🎯 Overview: Quick overview of all commit of Migration
-
 
 > (All steps and details after this section)
 
@@ -124,25 +113,21 @@
 
 > ⚒️ [Main Link of Source Code - All commits - https://github.com/spica234/angular-update-with-material3-poc/commits/main/](https://github.com/spica234/angular-update-with-material3-poc/commits/main/)
 
-|     | **Title**                                                            | **Description**                                                                                                                                                                                                                                                                                                               | **Link**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     | **Title**                                                            | **Description**                                                                                                                                                                                                                                                                                                               | **Link**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1.  | **Create New Project For POC**                                       | Created a `new project with minimal code`</br> - `HomePage` has all list of `users`, shown as `cards` </br> - Clicking on button `More Info`, open a `Model/Dialong` with entire `user detail` </br> -Project has that's all functionalities </br>- Created a `Core-Card` core component, an API Service, Loader Service etc. | ✅ [Angular 15 Project](https://github.com/spica234/angular-update-with-material3-poc/commit/0bdb9091a431ebd7386bb6657d50a3d82b5864bc) </br> ✅ [Create bareminimum project](https://github.com/spica234/angular-update-with-material3-poc/commit/d217ea4442aa7271ee11bb9eb754c5c24fc32a1e) </br> ✅ [Add ESLINT](https://github.com/spica234/angular-update-with-material3-poc/commit/afcebe262cc21342f74ec36844863ca0cb8186e9) </br> ✅ [Add Angular Material to Project](https://github.com/spica234/angular-update-with-material3-poc/commit/afcebe262cc21342f74ec36844863ca0cb8186e9) </br> ✅ [Remove Duplicate](https://github.com/spica234/angular-update-with-material3-poc/commit/f4d5652b12c56e1669f51fa8cc5e763d6f858dd8) </br> ✅ [Write all necessory codes related to project's POC requirement](https://github.com/spica234/angular-update-with-material3-poc/commit/2693af0175e46381a582c7da2a0c5b6d34f14542) </br> ✅ [Create A task for debug](https://github.com/spica234/angular-update-with-material3-poc/commit/84b57322e3819e3fa9d39f2f9cc9c0f3c53310ee) </br> ✅ [Add initial styles](https://github.com/spica234/angular-update-with-material3-poc/commit/f8b0ca7e245f3e2270f7098c90b80407ce16b464) </br> ✅ [Add a missing fav icon](https://github.com/spica234/angular-update-with-material3-poc/commit/5a7d472ef0bb2ec170c327c4df90b3b0a590523d) |
-| 2.  | **Migrate to Angular 16**                                            | Migrated the project to `Angular 16`</br> - Updated `Angular` and `Angular Material` to version `16`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                | ✅ [Migrate to Angular 16](https://github.com/spica234/angular-update-with-material3-poc/commit/5696f5b497e88759bf939497ddb928c9c400bcf3) </br> ✅ [Update Other Dependencies](https://github.com/spica234/angular-update-with-material3-poc/commit/a24ddcc817a2bcfafa17feb568c87d063cd8e71a)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| 3.  | **Migrate to Angular 17**                                            | Migrated the project to `Angular 17`</br> - Updated `Angular` and `Angular Material` to version `17`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                | ✅ [Migrate to Angular 17](https://github.com/spica234/angular-update-with-material3-poc/commit/b42b6f587b3a5254aff81a0a1068ac70605fcd67) </br> ✅ [Update Other Dependencies](https://github.com/spica234/angular-update-with-material3-poc/commit/4f0339f7055a577ca63b591d2ffbd95a0bdafc72) </br> ✅ [Migrate to Control Flow Statements](https://github.com/spica234/angular-update-with-material3-poc/commit/9dc3fba3d60d09b35737a791ea13f7089a2174ac)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| 4.  | **Migrate to Angular 18**                                            | Migrated the project to `Angular 18`</br> - Updated `Angular` and `Angular Material` to version `18`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                | ✅ [Migrate to Angular 18](https://github.com/spica234/angular-update-with-material3-poc/commit/b7e092814c5309913ebb94c1613309071661cb06) </br> ✅ [Add backward compatibility for M2](https://github.com/spica234/angular-update-with-material3-poc/commit/7027f6a2ad764da070a31f8a60bfa684f936e90e) </br> ✅ [Remove Deprecated APIs](https://github.com/spica234/angular-update-with-material3-poc/commit/31f99ec55d3815f853cbed62e07c9765662da0a2) </br> ✅ [Update Deps](https://github.com/spica234/angular-update-with-material3-poc/commit/646bf094978d669f7606f25212bb914b0f3ac50a) </br> ✅ [Migrate to Inect fucntion](https://github.com/spica234/angular-update-with-material3-poc/commit/672bde3afe34cd3c87e3bbf09a2dc834ec86be93) </br> ✅ [Integrate ESBUILD Lazyload Migrate](https://github.com/spica234/angular-update-with-material3-poc/commit/2e40fb6fe71e90d8511fffbf94759aa4eba42272)                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| 5.  | **Migrate to Angular 19**                                            | Migrated the project to `Angular 19`</br> - Updated `Angular` and `Angular Material` to version `19`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                | ✅ [Migrate to Angular 19](https://github.com/spica234/angular-update-with-material3-poc/commit/fdf52ad9ee94339a35ee0a8555b8fdd20a09fd8f) </br> ✅ [Migrate to new APIs](https://github.com/spica234/angular-update-with-material3-poc/commit/df39c2701a9ea307f4a58f0eedbde882a385c427) </br> ✅ [Update Deps](https://github.com/spica234/angular-update-with-material3-poc/commit/9ee760760f1a92a329e62425562e068f5509f5cd) </br> ✅ [Fix Standalone rmeoved during migration](https://github.com/spica234/angular-update-with-material3-poc/commit/8bc2469a906b4297d523a555e3863c67dc089be5) </br> ✅ [Add button module](https://github.com/spica234/angular-update-with-material3-poc/commit/716a16c61e7b64fb491f4bd7ca2615a88ec9ea20) </br> ✅ [Add BrowserAnimationModule](https://github.com/spica234/angular-update-with-material3-poc/commit/aa53d6a11a52cf3973010b32ac6e10bd852f40e1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| 6.  | **PreMaterial 3 Migration Build Resolutions**                        | Resolved all the build issues before migrating to Material 3                                                                                                                                                                                                                                                                  | ✅ [Resolve Build Issues](https://github.com/spica234/angular-update-with-material3-poc/commit/45433bdd2ce84752573c11d390229c1cc61dbf25)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| 7.  | **Migrate to Material 3: Create color patteletes based on M2 Theme** | Migrated the project to `Material 3`</br> - Updated `Angular Material` to version `3`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                               | ✅ [Migrate to Material 3 and make theme changes](https://github.com/spica234/angular-update-with-material3-poc/commit/aaef8e5f6b8cdbdecd1ff7e6c953615e368c88ae)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| 8.  | **Migrate to Material 3: Override Theme Colors**                     | Overrided the theme colors based on the new Material 3 theme                                                                                                                                                                                                                                                                  | ✅ [Override Theme Colors](https://github.com/spica234/angular-update-with-material3-poc/commit/4d7616c17e437fe8ec3d06e7b0587065d1ef7e82)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| 9.  | **Migrate to Material 3: Update Typography**                         | Updated the typography based on the new Material 3 theme                                                                                                                                                                                                                                                                      | ✅ [Update Typography](https://github.com/spica234/angular-update-with-material3-poc/commit/4bcc4182768374ac6bb5d01f0fbb324ae107f3e7)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| 10. | **Migrate to Material 3: Update Angular.json and import new theme**  | Updated the angular.json and imported the new Material 3 theme                                                                                                                                                                                                                                                                | ✅ [Update Angular.json and import new theme](https://github.com/spica234/angular-update-with-material3-poc/commit/833c822db335e8b4d640ffaf78f1bc3e2de4b809)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| 11. | **Migrate to Material 3: Update Component Themes**                   | Updated the component themes based on the new Material 3 theme                                                                                                                                                                                                                                                                | ✅ [Update Component Themes](https://github.com/spica234/angular-update-with-material3-poc/commit/712859ef58f38ee7821be2cf849cecfa114bb674) </br> ✅ [Remove Duplicate](https://github.com/spica234/angular-update-with-material3-poc/commit/6620c0c730c3a3999e7997fbf2e08319a6d340fc) </br> ✅ [Recreate Indigo with exact color code](https://github.com/spica234/angular-update-with-material3-poc/commit/7c4883c1d02a12fbdec0e540a4e134ab1f5ade6a) </br> ✅ [Fix Import typo](https://github.com/spica234/angular-update-with-material3-poc/commit/aefb0eb116c010d6699db1535c646808d4b5012a)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-
+| 2.  | **Migrate to Angular 16**                                            | Migrated the project to `Angular 16`</br> - Updated `Angular` and `Angular Material` to version `16`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                | ✅ [Migrate to Angular 16](https://github.com/spica234/angular-update-with-material3-poc/commit/5696f5b497e88759bf939497ddb928c9c400bcf3) </br> ✅ [Update Other Dependencies](https://github.com/spica234/angular-update-with-material3-poc/commit/a24ddcc817a2bcfafa17feb568c87d063cd8e71a)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 3.  | **Migrate to Angular 17**                                            | Migrated the project to `Angular 17`</br> - Updated `Angular` and `Angular Material` to version `17`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                | ✅ [Migrate to Angular 17](https://github.com/spica234/angular-update-with-material3-poc/commit/b42b6f587b3a5254aff81a0a1068ac70605fcd67) </br> ✅ [Update Other Dependencies](https://github.com/spica234/angular-update-with-material3-poc/commit/4f0339f7055a577ca63b591d2ffbd95a0bdafc72) </br> ✅ [Migrate to Control Flow Statements](https://github.com/spica234/angular-update-with-material3-poc/commit/9dc3fba3d60d09b35737a791ea13f7089a2174ac)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 4.  | **Migrate to Angular 18**                                            | Migrated the project to `Angular 18`</br> - Updated `Angular` and `Angular Material` to version `18`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                | ✅ [Migrate to Angular 18](https://github.com/spica234/angular-update-with-material3-poc/commit/b7e092814c5309913ebb94c1613309071661cb06) </br> ✅ [Add backward compatibility for M2](https://github.com/spica234/angular-update-with-material3-poc/commit/7027f6a2ad764da070a31f8a60bfa684f936e90e) </br> ✅ [Remove Deprecated APIs](https://github.com/spica234/angular-update-with-material3-poc/commit/31f99ec55d3815f853cbed62e07c9765662da0a2) </br> ✅ [Update Deps](https://github.com/spica234/angular-update-with-material3-poc/commit/646bf094978d669f7606f25212bb914b0f3ac50a) </br> ✅ [Migrate to Inect fucntion](https://github.com/spica234/angular-update-with-material3-poc/commit/672bde3afe34cd3c87e3bbf09a2dc834ec86be93) </br> ✅ [Integrate ESBUILD Lazyload Migrate](https://github.com/spica234/angular-update-with-material3-poc/commit/2e40fb6fe71e90d8511fffbf94759aa4eba42272)                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 5.  | **Migrate to Angular 19**                                            | Migrated the project to `Angular 19`</br> - Updated `Angular` and `Angular Material` to version `19`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                | ✅ [Migrate to Angular 19](https://github.com/spica234/angular-update-with-material3-poc/commit/fdf52ad9ee94339a35ee0a8555b8fdd20a09fd8f) </br> ✅ [Migrate to new APIs](https://github.com/spica234/angular-update-with-material3-poc/commit/df39c2701a9ea307f4a58f0eedbde882a385c427) </br> ✅ [Update Deps](https://github.com/spica234/angular-update-with-material3-poc/commit/9ee760760f1a92a329e62425562e068f5509f5cd) </br> ✅ [Fix Standalone rmeoved during migration](https://github.com/spica234/angular-update-with-material3-poc/commit/8bc2469a906b4297d523a555e3863c67dc089be5) </br> ✅ [Add button module](https://github.com/spica234/angular-update-with-material3-poc/commit/716a16c61e7b64fb491f4bd7ca2615a88ec9ea20) </br> ✅ [Add BrowserAnimationModule](https://github.com/spica234/angular-update-with-material3-poc/commit/aa53d6a11a52cf3973010b32ac6e10bd852f40e1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 6.  | **PreMaterial 3 Migration Build Resolutions**                        | Resolved all the build issues before migrating to Material 3                                                                                                                                                                                                                                                                  | ✅ [Resolve Build Issues](https://github.com/spica234/angular-update-with-material3-poc/commit/45433bdd2ce84752573c11d390229c1cc61dbf25)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 7.  | **Migrate to Material 3: Create color patteletes based on M2 Theme** | Migrated the project to `Material 3`</br> - Updated `Angular Material` to version `3`</br> - Addressed any `deprecations` or `breaking changes`                                                                                                                                                                               | ✅ [Migrate to Material 3 and make theme changes](https://github.com/spica234/angular-update-with-material3-poc/commit/aaef8e5f6b8cdbdecd1ff7e6c953615e368c88ae)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 8.  | **Migrate to Material 3: Override Theme Colors**                     | Overrided the theme colors based on the new Material 3 theme                                                                                                                                                                                                                                                                  | ✅ [Override Theme Colors](https://github.com/spica234/angular-update-with-material3-poc/commit/4d7616c17e437fe8ec3d06e7b0587065d1ef7e82)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| 9.  | **Migrate to Material 3: Update Typography**                         | Updated the typography based on the new Material 3 theme                                                                                                                                                                                                                                                                      | ✅ [Update Typography](https://github.com/spica234/angular-update-with-material3-poc/commit/4bcc4182768374ac6bb5d01f0fbb324ae107f3e7)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 10. | **Migrate to Material 3: Update Angular.json and import new theme**  | Updated the angular.json and imported the new Material 3 theme                                                                                                                                                                                                                                                                | ✅ [Update Angular.json and import new theme](https://github.com/spica234/angular-update-with-material3-poc/commit/833c822db335e8b4d640ffaf78f1bc3e2de4b809)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 11. | **Migrate to Material 3: Update Component Themes**                   | Updated the component themes based on the new Material 3 theme                                                                                                                                                                                                                                                                | ✅ [Update Component Themes](https://github.com/spica234/angular-update-with-material3-poc/commit/712859ef58f38ee7821be2cf849cecfa114bb674) </br> ✅ [Remove Duplicate](https://github.com/spica234/angular-update-with-material3-poc/commit/6620c0c730c3a3999e7997fbf2e08319a6d340fc) </br> ✅ [Recreate Indigo with exact color code](https://github.com/spica234/angular-update-with-material3-poc/commit/7c4883c1d02a12fbdec0e540a4e134ab1f5ade6a) </br> ✅ [Fix Import typo](https://github.com/spica234/angular-update-with-material3-poc/commit/aefb0eb116c010d6699db1535c646808d4b5012a)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## 🎯 Introduction
-
-
-
 
 Migration process will be further divided into two parts:
 
@@ -151,12 +136,10 @@ Migration process will be further divided into two parts:
 
 > By following these steps, we can ensure a smooth migration and take advantage of the latest features and improvements in Angular and Material.
 
-
-
 ## ❗**About Angular Migration**
 
-
 ### 🗒️ <span style="color:orange">Notes</span>
+
 -----------------------------------------------------------
 
 > ![Note](https://img.shields.io/badge/Important-Notes-red?style=flat)
@@ -167,12 +150,9 @@ Migration process will be further divided into two parts:
 > ➡️ Address any *deprecations, breaking changes, or compatibility issues* at each step.
 > ➡️ Use the `ng update` command, addressing deprecations at each stage.
 
-
 ### ⚛️ <span style="color:blue">Standard Commands for Angular Update</span>
 
 -----------------------------------------------------------
-
-
 
  Run `ng update` to find out packages that need to be updated.
 
@@ -206,7 +186,6 @@ Output: (Based on the current project's dependencies)
 > - Or we can use `--allow-dirty` flag to run the command without any issues.
 > - It's recommended to commit your changes before running the `ng update` command.
 
-
 ## 🚀 **Part 1: Migrate to Angular 19 with Incremental Updates: A Comprehensive Guide**
 
 ![Angular](https://img.shields.io/badge/Angular-19-red?style=flat&logo=angular)
@@ -218,18 +197,13 @@ Output: (Based on the current project's dependencies)
 > - [x] It's essential to incrementally upgrade your Angular project to the latest version.
 > - [x] This ensures a smooth transition and helps address any deprecations or breaking changes at each step.
 
-
 ⬆️ **Update:** **Incremental Upgrade from Angular 15 to Angular 19**
 
 -----------------------------------------------------------
 
-
-
 ### 1️⃣ **Upgrade to Angular 16**
 
 -----------------------------------------------------------
-
-
 
   Start by updating to **Angular 16**.
 
@@ -260,13 +234,11 @@ Output: (Based on the current project's dependencies)
 
   After successfully updating to Angular, , proceed to update other dependencies, especially third-party libraries, plugins, and tools, to make sure they are compatible with updated Angular version.
 
-
+-----------------------------------------------------------
 
 ### 2️⃣ **Upgrade to Angular 17**
 
 -----------------------------------------------------------
-
-
 
   After successfully updating to Angular 16, proceed to update to Angular 17.
 
@@ -297,13 +269,11 @@ After successfully updating to Angular 17, Verify the success of the update and 
 
 After successfully updating to Angular, , proceed to update other dependencies, especially third-party libraries, plugins, and tools, to make sure they are compatible with updated Angular version.
 
-
+-----------------------------------------------------------
 
 ### 3️⃣ **Upgrade to Angular 18**
 
 -----------------------------------------------------------
-
-
 
   After successfully updating to Angular 17, proceed to update to Angular 18.
 
@@ -314,7 +284,10 @@ After successfully updating to Angular, , proceed to update other dependencies, 
 > ![Note](https://img.shields.io/badge/Note-blue)
 > <version> in this case will be 18.
 
-##### **Other Various Migrations in Angular 18:**
+  **Other Various Migrations in Angular 18:**
+
+<details>
+<summary> &nbsp;<span style="bold">Click to expand...</span></summary>
 
 |     | **Migrations**                         | **Description**                                                                                                                                                                                                                                                                                                      |
 | --- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -323,19 +296,18 @@ After successfully updating to Angular, , proceed to update other dependencies, 
 | 3.  | **Remove Deprecated API**              | After Migration, replace HttpClientModule usage in providers array with provideHttpClient(withInterceptorsFromDi()).                                                                                                                                                                                                 |
 | 4.  | **Optional Inject Function Migration** | Inject Function Migration removes all DI services from the constructor and replaces them with `inject(<servicename>)` as a property.                                                                                                                                                                                 |
 
+</details>
 > After successfully updating to Angular 18, Verify the success of the update and address any deprecations or breaking changes.
 
 #### **2. Update Other Dependencies in compatibility with Angular 18**
 
 After successfully updating to Angular, , proceed to update other dependencies, especially third-party libraries, plugins, and tools, to make sure they are compatible with updated Angular version
 
-
+-----------------------------------------------------------
 
 ### 4️⃣ **Upgrade to Angular 19**
 
 -----------------------------------------------------------
-
-
 
   Finally, update to Angular 19.
 
@@ -354,12 +326,9 @@ After successfully updating to Angular 19, Verify the success of the update and 
 
 After successfully updating to Angular, , proceed to update other dependencies, especially third-party libraries, plugins, and tools, to make sure they are compatible with updated Angular version.
 
-
 ### Conclusion
 
 -----------------------------------------------------------
-
-
 
 By following above steps,
 
@@ -367,21 +336,21 @@ By following above steps,
 - This approach ensures a smooth transition and helps address any deprecations or breaking changes at each step.
 - Remember to update other dependencies and test your application thoroughly after each upgrade to ensure compatibility and functionality.
 
-
 -----------------------------------------------------------
-
 
 ## 🚀 **Part 2:** Migrate to Material 3 in Angular: A Comprehensive Guide
 
 ![Material](https://img.shields.io/badge/Material-2-yellow?style=flat&logo=material-design?logoColor=white) ➡️
 ![Material](https://img.shields.io/badge/Material-3-red?style=flat&logo=material-design)
 
-
 ### 🔄 Background
 
 -----------------------------------------------------------
 
+Material 3 introduces a new theming system based on MDC Web (Material Design Components for the Web).
 
+<details>
+<summary> &nbsp;<span style="font-weight: bold">Click here to expand</span></summary>
 
 Material 3 introduces a new theming system based on MDC Web (Material Design Components for the Web). This new system uses CSS variables (custom properties) for theming, providing a more flexible and powerful way to customize your application's appearance. Migrating to Material 3 involves significant changes, primarily in styling, theming, and some component APIs.
 
@@ -389,33 +358,28 @@ There's no shortcut to migrating to Material 3. It requires a thorough understan
 
 However there're **quick 2 gold-stanard steps** to migrate to Material 3 without learning the new theming system, however, it's highly recommended to understand Material 3's core concepts for a successful migration. That we'll see in `🔄 The Quick Migration Process: Two Key Steps (Without learning)` ahead.
 
+</details>
+
 ### 📄 Abstract
 
 -----------------------------------------------------------
 
-
-
 This document provides a comprehensive guide to migrating from Angular Material 2 to Material 3. It emphasizes the importance of understanding the fundamental changes in theming and styling between the two versions. Unlike a simple automated migration, a successful transition to Material 3 requires grasping its core concepts, particularly the shift to CSS variables for theming. This guide outlines the key differences, provides practical steps for migrating your theme, and highlights the benefits of adopting Material 3.
-
-
 
 ### 📝 Introduction to Material 3
 
 -----------------------------------------------------------
 
-
-
 Migrating to Material 3 is more than just updating dependencies; it's a shift in how we approach styling and theming your Angular Material applications. This guide emphasizes a knowledge-based approach, focusing on understanding the underlying principles of Material 3 rather than seeking shortcuts.
-
-
 
 ### 🔑 Key Differences Between Material 2 and Material 3 Theming
 
-
 -----------------------------------------------------------
 
-
 Material 2 relied heavily on Sass mixins and functions for theming, which could be complex and difficult to customize. Material 3 adopts a simpler and more powerful approach using native CSS variables (custom properties). This change brings several advantages:
+
+<details>
+<summary> &nbsp;<span style="font-weight: bold">Click here to expand</span></summary>
 
 | **Feature**       | **Material 2**                                                                                                                          | **Material 3**                                                                                                                                                                  |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -425,26 +389,20 @@ Material 2 relied heavily on Sass mixins and functions for theming, which could 
 | **Density**       | Default density and spacing.                                                                                                            | Adjusted density and spacing for a different visual appearance.                                                                                                                 |
 | **Theming**       | Uses mat-palette system.                                                                                                                | Uses a new theming system based on MDC Web (Material Design Components for the Web).                                                                                            |
 
-
+</details>
 
 ### 🧩 Understanding Material 3's CSS Variables
 
 -----------------------------------------------------------
-
-
 
 Material 3 uses a token-based system where design values (colors, typography, spacing, etc.) are represented by CSS variables. These variables follow a consistent naming convention, making them easier to understand and use.
 
 - **System-Level Variables**: These variables define core design values, like `--mat-sys-on-surface`, `--mat-sys-title-large-font`, and `--mat-sys-title-large-line-height`.
 - **Component-Specific Variables**: Each component also exposes its own set of CSS variables for more granular control.
 
-
-
-### 🔄 The Quick Migration Process: Two Key Steps (Without learning)
+### 🔄 **The Quick Migration Process: Two Key Steps (Without detailed steps)**
 
 -----------------------------------------------------------
-
-
 
 > See Commits realated to "Migrate to Material 3" in above `Overview` Section.
 
@@ -457,6 +415,10 @@ Start by mapping your existing Material 2 theme colors to the new Material 3 col
 By using existing theme's color palettes, we can ensure a consistent look and feel across the application. And by using existing themes's color patteletes we can create a new Angular Material 3 theme by using `ng generate @angular/material:m3-theme`, it will ask for the color patteletes and create a new theme based on that. We can sue existing theme's color patteletes to create a new theme. After creating a new theme, we can use that theme in our application.
 
 Script will Create theme in `src/app/styles/_theme-colors.scss`
+
+> ![!important](https://img.shields.io/badge/Important-red?style=flat)
+>
+> See Commits realated to "Migrate to Material 3" in above`Overview` Section.
 
 #### Step 2: Override CSS Variables
 
@@ -478,11 +440,94 @@ Or we can create an override file for e.g. `src/app/styles/override.scss` and im
 ],
 ```
 
+> ![!important](https://img.shields.io/badge/Important-red?style=flat)
+>
+> See Commits realated to "Migrate to Material 3" in above`Overview` Section.
+
+#### ❗ Other ways to override CSS Variables
+
+<details>
+<summary> &nbsp;<span style="font-weight: bold">Click here to expand</span></summary>
+
+>
+>
+> **I. Using Theme Styles**
+> e.g
+>
+> ```scss
+> :host {
+>  background: var(--mat-sys-primary-container);
+> color: var(--mat-sys-on-primary-container);
+>}
+>
+>```
+>
+>
+> **II. Customizing Tokens**
+>
+> `A. Using System Token`
+> e.g
+>
+> ```scss
+> @use '@angular/material' as mat;
+>
+> html {
+>  color-scheme: light dark;
+>  @include mat.theme((
+>    color: mat.$azure-palette,
+>    typography: Roboto,
+>    density: 0
+>  ));
+>
+>  .green-primary-container {
+>    @include mat.theme-overrides((
+>      primary-container:rgb(26, 183, 183)
+>    ));
+>  }
+>
+>}
+>
+>```
+>
+> OR
+> e.g
+>
+>```scss
+> @use '@angular/material' as mat;
+>
+> html {
+>  color-scheme: light dark;
+>  @include mat.theme((
+>    color: mat.$violet-palette,
+>    typography: Roboto,
+>    density: 0
+>  ), $overrides: (
+>    primary-container: orange,
+>  );
+>}
+>```
+>
+> `B. Using Component Token`
+> Each component has its own set of CSS variables that can be customized. For example, to customize the button component:
+> e.g
+>
+> ```scss
+> html {
+>  @include mat.card-overrides((
+>    elevated-container-color: purple,
+>    elevated-container-shape: 20px,
+>    title-text-size: 1rem,
+>    title-text-color: blue,
+>  ));
+>}
+>```
+>
+>Others as well such as `Shadown DOM`, `Direct Style Overrides`, `Custom Component Themes` etc. Which can be found in the official Angular Material Documentation.
+>
+
+</details>
 
 ### 🛠️ Steps to Migrating Custom Themes in Material 3 (Detailed with optional steps required for full project migrations)
-
------------------------------------------------------------
-
 
 
 This is the most complex part of the Material 3 migration.
@@ -496,15 +541,11 @@ This is the most complex part of the Material 3 migration.
 - [x] **Typography:** Use the mat.define-typography-config function to configure typography.
 - [x] **Test and Adjust:** Test your application thoroughly and adjust the theme as needed.
 
-
 ### 🏁 Conclusion
 
 -----------------------------------------------------------
 
-
-
 Migrating to Material 3 requires a shift in mindset from the Sass-based approach of Material 2 to the CSS variable-driven theming of Material 3. By understanding the core concepts and following the two key steps outlined in this guide – defining color palettes and overriding CSS variables – we can effectively migrate your Angular Material applications and take advantage of the benefits of the latest Material Design specifications. There is no shortcut for learning and understanding Material 3.
-
 
 ## 📊 Visual Overview
 
@@ -562,29 +603,4 @@ graph TD
   style A19 fill:#ffe6e6
 ```
 
-
-
-## 📖 Summary
-
-
-In Summary, the migration process involves:
-
-1. Incremental upgrades from Angular 15 to Angular 19.
-2. Updating dependencies to their latest versions.
-3. Addressing TypeScript compatibility.
-4. Thorough testing and linting.
-5. Building and deploying the updated application.
-6. Visual overview of the migration process using a mermaid flowchart.
-7. Following the official Angular and Material documentation for accurate information.
-8. Ensuring a smooth migration by addressing issues incrementally.
-9. Taking advantage of the features and improvements of Material 3.
-10. Consulting the official Angular and Material documentation for the most accurate and up-to-date information.
-
-
-
-
-## 🏁 Conclusions
-
-
-
-Integrating advanced debugging, thorough code reviews, and comprehensive QA testing ensures bugs are identified and resolved before reaching production.
+## 📖 Refrerences
