@@ -1,4 +1,4 @@
-# 🌀 <span style="color:red">Migrating an Angular 15 project to Angular 19.1 with Material 3</span>
+# 🌀 <span style="color:red">**Migrating an Angular 15 project to Angular 19.1 with Material 3**</span>
 
 <div
   style="
@@ -41,13 +41,13 @@
 &nbsp;
 </div>
 
-## ⚡ Table of Contents
+## ⚡ **Table of Contents**
 
-- [🌀 Migrating an Angular 15 project to Angular 19.1 with Material 3](#-migrating-an-angular-15-project-to-angular-191-with-material-3)
-  - [⚡ Table of Contents](#-table-of-contents)
-  - [✨ Final Converted Project's Material 3 Various Patteletes Preview by running Project](#-final-converted-projects-material-3-various-patteletes-preview-by-running-project)
+- [🌀 **Migrating an Angular 15 project to Angular 19.1 with Material 3**](#-migrating-an-angular-15-project-to-angular-191-with-material-3)
+  - [⚡ **Table of Contents**](#-table-of-contents)
+  - [✨ **Final Converted Project's Material 3 Various Patteletes Preview by running Project**](#-final-converted-projects-material-3-various-patteletes-preview-by-running-project)
+  - [🎯 **Quick Overview: Quick View of all the commits of Migration**](#-quick-overview-quick-view-of-all-the-commits-of-migration)
   - [📝 Abstract](#-abstract)
-  - [🎯 Overview: Quick overview of all commit of Migration](#-overview-quick-overview-of-all-commit-of-migration)
   - [🎯 Introduction](#-introduction)
   - [❗**About Angular Migration**](#about-angular-migration)
     - [🗒️ Notes](#️-notes)
@@ -82,9 +82,9 @@
     - [🏁 Conclusion](#-conclusion)
   - [📊 Visual Overview](#-visual-overview)
     - [📈 Migration Process Flowchart For Angular 15 -\> Angular 19 and Material 3](#-migration-process-flowchart-for-angular-15---angular-19-and-material-3)
-  - [📖 Refrerences](#-refrerences)
+  - [📖 Read more](#-read-more)
 
-## ✨ Final Converted Project's Material 3 Various Patteletes Preview by running Project
+## ✨ **Final Converted Project's Material 3 Various Patteletes Preview by running Project**
 
 > To run the project, simply clone and run `npm install` and then `npm run start` for `serve` or `npm run build` if requirede to be deployed.
 
@@ -101,11 +101,7 @@
   <img src="https://a.okmd.dev/md/67975191c252c.png" alt="s14574101272025" width="200px" height="370px" />
 </div>
 
-## 📝 Abstract
-
-<p style="margin-left: 20px;">This guide provides a structured approach to migrating to latest **Material 3**. In order to use Material 3, we need to upgrade our Angular project to >= Angular 18, as Material 3 was not quite compatible with Angular 17 or below.</p>
-
-## 🎯 Overview: Quick overview of all commit of Migration
+## 🎯 **Quick Overview: Quick View of all the commits of Migration**
 
 > (All steps and details after this section)
 
@@ -126,6 +122,10 @@
 | 9.  | **Migrate to Material 3: Update Typography**                         | Updated the typography based on the new Material 3 theme                                                                                                                                                                                                                                                                      | ✅ [Update Typography](https://github.com/spica234/angular-update-with-material3-poc/commit/4bcc4182768374ac6bb5d01f0fbb324ae107f3e7)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | 10. | **Migrate to Material 3: Update Angular.json and import new theme**  | Updated the angular.json and imported the new Material 3 theme                                                                                                                                                                                                                                                                | ✅ [Update Angular.json and import new theme](https://github.com/spica234/angular-update-with-material3-poc/commit/833c822db335e8b4d640ffaf78f1bc3e2de4b809)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | 11. | **Migrate to Material 3: Update Component Themes**                   | Updated the component themes based on the new Material 3 theme                                                                                                                                                                                                                                                                | ✅ [Update Component Themes](https://github.com/spica234/angular-update-with-material3-poc/commit/712859ef58f38ee7821be2cf849cecfa114bb674) </br> ✅ [Remove Duplicate](https://github.com/spica234/angular-update-with-material3-poc/commit/6620c0c730c3a3999e7997fbf2e08319a6d340fc) </br> ✅ [Recreate Indigo with exact color code](https://github.com/spica234/angular-update-with-material3-poc/commit/7c4883c1d02a12fbdec0e540a4e134ab1f5ade6a) </br> ✅ [Fix Import typo](https://github.com/spica234/angular-update-with-material3-poc/commit/aefb0eb116c010d6699db1535c646808d4b5012a)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+
+## 📝 Abstract
+
+<p style="margin-left: 20px;">This guide provides a structured approach to migrating to latest **Material 3**. In order to use Material 3, we need to upgrade our Angular project to >= Angular 18, as Material 3 was not quite compatible with Angular 17 or below.</p>
 
 ## 🎯 Introduction
 
@@ -163,7 +163,7 @@ Migration process will be further divided into two parts:
 > - This is based on the senario with the packages that need to be updated as shown below.
 > - The actual packages that need to be updated might be different based on your project. And can be obtained as mentioned above.
 
-Commnad:
+Commands:
 >
 > ```powershell
 > ng update
@@ -287,7 +287,7 @@ After successfully updating to Angular, , proceed to update other dependencies, 
   **Other Various Migrations in Angular 18:**
 
 <details>
-<summary> &nbsp;<span style="bold">Click to expand...</span></summary>
+<summary> &nbsp;<span style="font-weight: bold">Click here to read more</span></summary>
 
 |     | **Migrations**                         | **Description**                                                                                                                                                                                                                                                                                                      |
 | --- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -350,7 +350,7 @@ By following above steps,
 Material 3 introduces a new theming system based on MDC Web (Material Design Components for the Web).
 
 <details>
-<summary> &nbsp;<span style="font-weight: bold">Click here to expand</span></summary>
+<summary> &nbsp;<span style="font-weight: bold">Click here to read more</span></summary>
 
 Material 3 introduces a new theming system based on MDC Web (Material Design Components for the Web). This new system uses CSS variables (custom properties) for theming, providing a more flexible and powerful way to customize your application's appearance. Migrating to Material 3 involves significant changes, primarily in styling, theming, and some component APIs.
 
@@ -379,7 +379,7 @@ Migrating to Material 3 is more than just updating dependencies; it's a shift in
 Material 2 relied heavily on Sass mixins and functions for theming, which could be complex and difficult to customize. Material 3 adopts a simpler and more powerful approach using native CSS variables (custom properties). This change brings several advantages:
 
 <details>
-<summary> &nbsp;<span style="font-weight: bold">Click here to expand</span></summary>
+<summary> &nbsp;<span style="font-weight: bold">Click here to read more</span></summary>
 
 | **Feature**       | **Material 2**                                                                                                                          | **Material 3**                                                                                                                                                                  |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -447,7 +447,7 @@ Or we can create an override file for e.g. `src/app/styles/override.scss` and im
 #### ❗ Other ways to override CSS Variables
 
 <details>
-<summary> &nbsp;<span style="font-weight: bold">Click here to expand</span></summary>
+<summary> &nbsp;<span style="font-weight: bold">Click here to read more</span></summary>
 
 >
 >
@@ -529,7 +529,6 @@ Or we can create an override file for e.g. `src/app/styles/override.scss` and im
 
 ### 🛠️ Steps to Migrating Custom Themes in Material 3 (Detailed with optional steps required for full project migrations)
 
-
 This is the most complex part of the Material 3 migration.
 
 - [x] **Remove Old Theme Files:** Delete your old theme files (e.g., theme.scss).
@@ -603,4 +602,8 @@ graph TD
   style A19 fill:#ffe6e6
 ```
 
-## 📖 Refrerences
+## 📖 Read more
+>
+> - [Angular Update Guide](https://update.angular.io/)
+> - [Angular Material 3 Documentation](https://material.angular.io/guide/theming)
+> - [Angular Material 3 Migration Guide](https://material.angular.io/guide/migration)
