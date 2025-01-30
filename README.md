@@ -125,7 +125,7 @@
 
 ## 📝 Abstract
 
-<p style="margin-left: 20px;">This guide provides a structured approach to migrating to latest **Material 3**. In order to use Material 3, we need to upgrade our Angular project to >= Angular 18, as Material 3 was not quite compatible with Angular 17 or below.</p>
+<p style="margin-left: 20px;">This guide provides a structured approach to migrating to latest *Material 3*. In order to use Material 3, we need to upgrade our Angular project to >= Angular 18, as Material 3 was not quite compatible with Angular 17 or below.</p>
 
 ## 🎯 Introduction
 
@@ -144,11 +144,11 @@ Migration process will be further divided into two parts:
 
 > ![Note](https://img.shields.io/badge/Important-Notes-red?style=flat)
 >
-> ➡️ This is an `incremental process`, starting with *Angular 16*, then *Angular 17*, then *Angular 18*, and finally *Angular 19*.
-> ➡️ Don't jump directly to *Angular 19*. Update *incrementally* to avoid potential issues.
-> ➡️ Run `ng update` to evaluate the changes and ensure a smooth transition and to find out packages that need to be updated.
-> ➡️ Address any *deprecations, breaking changes, or compatibility issues* at each step.
-> ➡️ Use the `ng update` command, addressing deprecations at each stage.
+> ➡️ This is an `incremental process`, starting with *Angular 16*, then *Angular 17*, then *Angular 18*, and finally *Angular 19*.  
+> ➡️ Don't jump directly to *Angular 19*. Update *incrementally* to avoid potential issues.  
+> ➡️ Run `ng update` to evaluate the changes and ensure a smooth transition and to find out packages that need to be updated.  
+> ➡️ Address any *deprecations, breaking changes, or compatibility issues* at each step.  
+> ➡️ Use the `ng update` command, addressing deprecations at each stage.  
 
 ### ⚛️ <span style="color:blue">Standard Commands for Angular Update</span>
 
