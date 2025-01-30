@@ -220,7 +220,7 @@ Output: (Based on the current project's dependencies)
 >
 > ![Note](https://img.shields.io/badge/Note-blue)
 >
-> 💡 [What are standalone Components](https://blog.angular-university.io/angular-standalone-components/)
+> 💡 [What is standalone Components?](https://blog.angular-university.io/angular-standalone-components/)
 
 - Migrate to standalone components by running Migration Schematic.
 
@@ -297,6 +297,7 @@ After successfully updating to Angular, , proceed to update other dependencies, 
 | 4.  | **Optional Inject Function Migration** | Inject Function Migration removes all DI services from the constructor and replaces them with `inject(<servicename>)` as a property.                                                                                                                                                                                 |
 
 </details>
+
 > After successfully updating to Angular 18, Verify the success of the update and address any deprecations or breaking changes.
 
 #### **2. Update Other Dependencies in compatibility with Angular 18**
